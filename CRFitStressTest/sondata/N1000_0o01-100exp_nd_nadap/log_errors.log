@@ -1,0 +1,41 @@
+Run 1:  Sat Feb 25 12:39:51 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\Documents\MATLAB\CRFitStressTest\N1000_0o01-100exp_nd_nadap.son.
+
+    Begin electromagnetic simulation using frequency sweep:
+      Exponential Start = 0.01, Stop = 100, Number = 1000 GHZ
+
+    Frequency:  0.01 GHZ
+
+      Sonnet Warning:
+      Potential problem with box parameter.
+      The X cell size (0.1 mm) is greater than
+      1/20 wavelength (0.063916 mm) at 100 GHz.
+      You must decrease the cell size or reduce the required number
+      of subsections per wavelength to resolve this conflict.
+
+
+      Sonnet Warning:
+      Potential problem with box parameter.
+      The Y cell size (0.1 mm) is greater than
+      1/20 wavelength (0.063916 mm) at 100 GHz.
+      You must decrease the cell size or reduce the required number
+      of subsections per wavelength to resolve this conflict.
+
+
+    Post-Analysis information for em run 1:
+      Em errors detected: 0    Em warnings detected: 2.
+
+Em simulation completed Sat Feb 25 12:41:38 2023.
+
+
+Run 2:  Sat Mar 04 10:16:57 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\AppData\Local\Sonnet Software\sonnet\..\..\..\..\Documents\MATLAB\CRFitStressTest\N1000_0o01-100exp_nd_nadap.son.
+
+    Post-Analysis information for em run 2:
+      Em errors detected: 0    Em warnings detected: 0.
+
+Em simulation completed Sat Mar 04 10:16:57 2023.

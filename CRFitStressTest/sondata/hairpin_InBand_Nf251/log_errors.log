@@ -1,0 +1,26 @@
+Run 1:  Tue Mar 21 12:10:27 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\Documents\MATLAB\CRFitStressTest\hairpin_InBand_Nf201.son.
+
+    Begin electromagnetic simulation using frequency sweep:
+      Linear Start = 4, Stop = 4.2, Step = 0.001 GHZ
+
+    Post-Analysis information for em run 1:
+      Em errors detected: 0    Em warnings detected: 0.
+
+Em simulation completed Tue Mar 21 12:14:11 2023.
+
+
+Run 2:  Tue Mar 21 12:16:32 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\Documents\MATLAB\CRFitStressTest\hairpin_InBand_Nf201.son.
+
+    Begin electromagnetic simulation using frequency sweep:
+      Linear Start = 3.95, Stop = 4.2, Step = 0.001 GHZ
+
+    Post-Analysis information for em run 2:
+      Em errors detected: 0    Em warnings detected: 0.
+
+Em simulation completed Tue Mar 21 12:17:24 2023.

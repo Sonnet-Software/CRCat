@@ -1,0 +1,1048 @@
+Run 1:  Fri Feb 17 13:47:08 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\Documents\MATLAB\CRFitStressTestData\N100_0o01-10exp_nd_nadap.son.
+
+    Begin electromagnetic simulation using frequency sweep:
+      Exponential Start = 0.01, Stop = 10, Number = 100 GHZ
+
+    Frequency:  0.01 GHZ
+      Subsectioning at 10 GHz with Eeff of 5.5.
+      Subsectioning time:  0.001 seconds.
+      Em license feature:  emhighperformance.
+
+      Circuit requires 4 subsections and 1 MB of memory.
+
+      Primary structure subsections by level and type:
+      Level 0:
+        Surface Staircase:  4
+
+      Process memory by type:
+        System matrix:            0 MB
+        Elemental subsections:
+          Primary structure:      0 MB
+        Fourier transform:        0 MB
+        Waveguide mode:           1 MB
+        Adaptive band synthesis:  0 MB
+        Miscellaneous:            1 MB
+        TOTAL REQUIRED MEMORY:    1 MB
+
+      Amount of RAM installed on host computer:  32 GB
+      Number of logical processors:  8
+      Matrix solver:  internal 64-bit SSE with loss.
+      Simulation mode:  local machine.
+      Threads:  using 8 thread(s), 8 core(s) available.
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.002 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.007 seconds.
+      Matrix solve time:  0.003 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.017 seconds.
+
+    Frequency:  0.0107226722201 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  0.01149756995398 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0.001 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.01232846739442 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.01321941148466 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  0.01417474162927 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.01519911082953 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  0.01629750834621 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.01747528400008 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.002 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.0187381742286 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.003 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.007 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.010 seconds.
+
+    Frequency:  0.02009233002565 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.02154434690032 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.02310129700083 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.02477076355992 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.02656087782947 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.02848035868436 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  0.03053855508833 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.03274549162878 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.03511191734215 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.03764935806792 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.04037017258597 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.04328761281083 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.04641588833613 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.002 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  0.04977023564332 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.05336699231206 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.0572236765935 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.06135907273413 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.06579332246576 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.07054802310719 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.07564633275546 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.08111308307897 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  0.08697490026178 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.003 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.09326033468832 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  0.1 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  0.107226722201 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.1149756995398 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.1232846739442 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.1321941148466 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0.001 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.1417474162927 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.1519911082953 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.1629750834621 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.1747528400008 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.187381742286 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.2009233002565 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.2154434690032 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.2310129700083 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.2477076355992 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.2656087782947 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.2848035868436 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.3053855508833 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.3274549162878 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.3511191734215 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.006 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.3764935806792 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0.001 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.4037017258597 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.4328761281083 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.4641588833613 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.006 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  0.4977023564332 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.5336699231206 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.572236765935 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.002 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.6135907273413 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.6579332246576 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.7054802310719 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  0.7564633275546 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.8111308307897 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.8697490026178 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  0.9326033468832 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1.07226722201 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  1.149756995398 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  1.232846739442 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1.321941148466 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1.417474162927 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1.519911082953 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  1.629750834621 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1.747528400008 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  1.87381742286 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  2.009233002565 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  2.154434690032 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  2.310129700083 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  2.477076355992 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  2.656087782947 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  2.848035868436 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  3.053855508833 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  3.274549162878 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  3.511191734215 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  3.764935806792 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.006 seconds.
+
+    Frequency:  4.037017258597 GHZ
+      Waveguide mode time:  0.002 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  4.328761281083 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  4.641588833613 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.007 seconds.
+
+    Frequency:  4.977023564332 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.006 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  5.336699231206 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  5.72236765935 GHZ
+      Waveguide mode time:  0.003 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.004 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  6.135907273413 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  6.579332246576 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  7.054802310719 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0.001 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.006 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  7.564633275546 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.005 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.008 seconds.
+
+    Frequency:  8.111308307897 GHZ
+      Waveguide mode time:  0.004 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.006 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  8.697490026178 GHZ
+      Waveguide mode time:  0.005 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.006 seconds.
+      Matrix solve time:  0.002 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.009 seconds.
+
+    Frequency:  9.326033468832 GHZ
+      Waveguide mode time:  0.005 seconds.
+      Fourier transform time:  0.002 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.008 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.010 seconds.
+
+    Frequency:  10 GHZ
+      Waveguide mode time:  0.006 seconds.
+      Fourier transform time:  0.001 seconds.
+      Coupling time:  0 seconds.
+      Loss time:  0 seconds.
+      Matrix fill time:  0.008 seconds.
+      Matrix solve time:  0.001 seconds.
+      Frequency completed Fri Feb 17 13:47:08 2023.
+      Total time per frequency:  0.013 seconds.
+
+    Post-Analysis information for em run 1:
+      Total time for 100 frequencies:  0.761 seconds.
+
+Em simulation completed Fri Feb 17 13:47:08 2023.
+
+
+Run 2:  Fri Feb 17 14:33:46 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\Documents\MATLAB\CRFitStressTest\N100_0o01-10exp_nd_nadap.son.
+
+    Post-Analysis information for em run 2:
+      Total time for 0 frequencies:  0 seconds.
+
+Em simulation completed Fri Feb 17 14:33:46 2023.

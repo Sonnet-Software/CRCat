@@ -1,0 +1,12 @@
+Run 1:  Thu Mar 09 14:18:06 2023.  sonnet10.72.52417.
+        Em version 18.56 (64-bit Windows) on Rover7 local.
+
+  Project:  C:\Users\rautio\Documents\MATLAB\CRFitStressTest\N3000_0o1-100exp_nd_nadap.son.
+
+    Begin electromagnetic simulation using frequency sweep:
+      Exponential Start = 0.1, Stop = 100, Number = 3000 GHZ
+
+    Post-Analysis information for em run 1:
+      Em errors detected: 0    Em warnings detected: 0.
+
+Em simulation completed Thu Mar 09 16:29:52 2023.
