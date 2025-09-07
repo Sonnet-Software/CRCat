@@ -380,7 +380,9 @@
             % theToComp = Transform( theFromComp,theToId,theCat ): Convert the
             % RLC values in FromComp to the equivalent RLC values in a comp
             % of ToId. If no way to convert, return empty. Only one ToId to be
-            % passed. Name or integer may be passed in ToId. -- 25Mar2025jcr 
+            % passed. Name or integer may be passed in ToId. -- 25Mar2025jcr
+            % If more than one set of values for theFromComp, only the
+            % first set is converted. -- jcr 07Sep2025
             
             if nargin < 2
                 error('Missing the ToId.');
@@ -418,11 +420,8 @@
             end % if isempty
 
             theToComp = CRComp( aToId,theCat );
-            [numRows,~] = size(theFromComp.valEL);
-            for iRow = numRows : -1 : 1
-                theToComp.valEL(iRow,:) = double( subs( aXfrm.eqn, aXfrm.fromVar, theFromComp.valEL(iRow,:) ) );
-            end % for iRow
-            return;
+            theToComp.valEL = double( subs( aXfrm.eqn, aXfrm.fromVar, theFromComp.valEL(1,:) ) );
+
         end % Transform
         
         
