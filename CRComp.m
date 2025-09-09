@@ -8,7 +8,8 @@
     properties (SetAccess = protected)
         symY;  % Symbolic equation for entire rational polynomial in terms of element values.
         symC;  % Symbolic CR Poly coefficients, Ai and Bi.
-        symVn; % Symbolic symbols for RLC lumped elements.
+        symV;  % Symbolic symbols for RLC lumped elements that can be synthesized.
+        symVn; % Symbolic symbols for all RLC lumped elements in the component.
         symEL; % Symbolic equations to go from fitted A,B coefficients to lumped element values.
         valEL; % Values of the RLCs. If empty, ignore this component during Eval.
         flagA; % Numerator signature.
@@ -74,11 +75,8 @@
                         theComp(iC).symY = aCatItem.symA / aCatItem.symB; % Symbolic equation for admittance in terms of RLC values.
                         theComp(iC).symC = aCatItem.symC; % Symbolic CR poly coefficients, Ai and Bi.
                         theComp(iC).symEL = aCatItem.symEL; % Symbolic equations to go from CRPoly coeff to RLC values.
-                        if ~isempty(aCatItem.symVn)
-                            theComp(iC).symVn = aCatItem.symVn;
-                        else
-                            theComp(iC).symVn = aCatItem.symV;
-                        end % if ~isempty
+                        theComp(iC).symV = aCatItem.symV; % Symbolic variables for elements that can be synthesized.
+                        theComp(iC).symVn = aCatItem.symVn; % Symbolic variables for all elements in the component.
                         [ theComp(iC).flagA,theComp(iC).flagB ] = theCat.Sig2Flags( aCatItem.flagSig );
                         if nargin == 2
                             theComp(iC).valEL = aCatItem.testEL; % Set RLCs to default testing values.
@@ -155,19 +153,19 @@
             end % if aNumSolutions
             % aNumVn is total number of elements in the component, including fixed elements not solved for in symEL.
             aNumVn = numel( theComp(1).symVn );
+
             if aNumVn > aNumV % Store the sybolic names and values of the RLCs that are not synthesized.
-                aSymVnFixed = theComp(1).symVn(aNumV+1:aNumVn);
+                aSymVnFixed = setdiff( theComp(1).symVn,theComp(1).symV );
                 % Make sure we have values for these elements.
-                if nargin ~= 4 || isempty(theValVnFixed)
-                    theComp(1).valEL = [];
-                    theRSSError = [];
-                    return
+                if nargin < 4 || isempty(theValVnFixed)
+                    % No fixed element values were passed. Use whatever is already in the component.
+                    theValVnFixed = theComp.valEL( has(theComp.symVn,aSymVnFixed) );
                 end % if nargin
                 [ aNumCases,aNumValues ] = size( theValVnFixed );
                 if aNumValues ~= aNumVn - aNumV
                     error('Need %d fixed element values for %s, but %d were passed.',aNumVn-aNumV,theComp(1).name,aNumValues)
                 end % if aNumValues
-            elseif aNumV == aNumVn && nargin == 4 && numel(theValVnFixed) ~= 0
+            elseif aNumV == aNumVn && nargin >= 4 && numel(theValVnFixed) ~= 0
                 [ ~,aNumValues ] = size( theValVnFixed );
                 error('No fixed element values needed for %s, but %d were passed.',theComp(1).name,aNumValues)
             else
@@ -191,23 +189,26 @@
                 return;
             end % if aResultFlag
 
-            theComp.valEL = zeros( aNumSolutions*aNumCases,aNumVn ); % Allocate memory for element values.
+            theComp(1).valEL = zeros( aNumSolutions*aNumCases,aNumVn ); % Allocate memory for element values.
             % Calc element values. If throws an error, something wrong with the catalog symEL or symC.
             aTmp = [ aA aB ]; % All the fitted coefficients, inlcuding zero terms, returned by CRFit.
             aFittedCoef = aTmp( [ theComp(1).flagA theComp(1).flagB ] ); % Just the coef returned by coeffs for symC.
             iValRow = 1; % Start row for storing element value solutions.
             for iCase = 1:aNumCases
                 try
+                    % Substitute in the fitted values of the rational polynomial coefficients.
                     aSymEL = subs( theComp(1).symEL, theComp(1).symC, aFittedCoef );
-                    if aNumVn > aNumV % We have some fixed element values to substitute in too.
-                        aSymEL = subs( aSymEL, aSymVnFixed, theValVnFixed(iCase,:) );
-                        % Put the fixed element values into the component element value array.
-                        theComp(1).valEL( iValRow:iValRow+aNumSolutions-1,aNumV+1:aNumVn ) = ...
-                            repmat( theValVnFixed(iCase,:),aNumSolutions,1 );
-                    end % if aNumVn
                     % Sometimes sym pi appears after the above substitution and makes double take forever.
                     aSymEL = subs( aSymEL, pi, 3.141592653590 );
-                    theComp(1).valEL( iValRow:iValRow+aNumSolutions-1,1:aNumV ) = double( aSymEL );
+
+                    if aNumVn > aNumV % Substitute in the fixed values into the aSymEL variables.
+                        aSymEL = subs( aSymEL, aSymVnFixed, theValVnFixed(iCase,:) );
+                        theComp(1).valEL( iValRow:iValRow+aNumSolutions-1,has(theComp.symVn,aSymVnFixed) ) = ...
+                            repmat( theValVnFixed(iCase,:),aNumSolutions,1 );
+                    end % if aNumVn
+
+                    theComp(1).valEL( iValRow:iValRow+aNumSolutions-1,has(theComp.symVn,theComp.symV) ) = double( aSymEL );
+
                     iValRow = iValRow + aNumSolutions;
                 catch
                     warning('Component name = %s, Case %d: Unable to solve for RLC values. Element values set to zero.', ...

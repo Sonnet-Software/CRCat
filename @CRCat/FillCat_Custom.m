@@ -98,6 +98,15 @@ function theLen = FillCat_Custom(theCat,theStartIndex)
     end
 
     index = index + 1;
+    if aLen 
+        syms La Lb Rc Ld Cdd
+        theCat.list(index).symV =          [ La  Lb  Rc  Ld ];
+        theCat.list(index).symVn =         [ La  Lb  Rc  Cdd  Ld ];
+        theCat.list(index).nodes = uint32( [ 1 2 2 0 2 3 3 0 3 0 ] );
+        theCat.list(index).name =  'XXXII-39_FixedCdd2';
+    end
+
+    index = index + 1;
     if aLen  % An L in series with (an L in parallel with an R in series with a parallel LC):  XXXII-39.
         syms La Lb Rc Ldd Cdd
         theCat.list(index).symV =          [ La  Lb  Rc  ];
@@ -108,11 +117,11 @@ function theLen = FillCat_Custom(theCat,theStartIndex)
 
     index = index + 1;
     if aLen  % An L in series with (an L in parallel with an R in series with a parallel LC):  XXXII-39.
-        syms La Lb Rcc Ldd Cdd
-        theCat.list(index).symV =          [ La  Lb  ];
-        theCat.list(index).symVn =         [ La  Lb  Rcc  Ldd  Cdd ];
+        syms La Lbb Rcc Ld Cd
+        theCat.list(index).symV =          [ La           Ld   Cd ];
+        theCat.list(index).symVn =         [ La  Lbb  Rcc Ld   Cd ];
         theCat.list(index).nodes = uint32( [ 1 2 2 0 2 3  3 0  3 0 ] );
-        theCat.list(index).name =  'XXXII-39_FixedRcLdCdd';
+        theCat.list(index).name =  'XXXII-39_FixedLbRca';
     end
 
     index = index + 1;

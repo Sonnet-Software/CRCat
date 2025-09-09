@@ -183,7 +183,7 @@
                     aFieldNames = fieldnames( aMatFile );
                     aCustomCat = aMatFile.( aFieldNames{1} );
                     theCat.Append( aCustomCat );
-                    theCat.CheckSymVn; % Make sure symV and the first part of symVn are the same.
+                    theCat.CheckSymVn; % Make sure symV and symVn are consistent.
                     theCat.Save('default');
                     return;
                 else
@@ -501,8 +501,8 @@
         %
         
         function CheckSymVn(theCat)
-            % ChecSymVn(Cat):  Check to make sure Cat.symV is identical to
-            % the first part of Cat.symVn. symVn holds all the nodal
+            % ChecSymVn(Cat):  Check to make sure Cat.symV is a subset of
+            % Cat.symVn. symVn holds all the nodal
             % variables for a circuit, while symV just holds those
             % variables that are solved for. If symVn is empty, then copy
             % symV into symVn so that they are identical. During initial
@@ -512,17 +512,19 @@
             if ~isempty(theCat) && ~isempty(theCat.list)
                 for index = 1:length(theCat.list)
                     aCatItem = theCat.list(index);
+
                     if isempty( aCatItem.symVn )
                         theCat.list(index).symVn = aCatItem.symV;
-                    elseif length(aCatItem.symV) <= length(aCatItem.symVn)
-                        aStrV = char( aCatItem.symV );
-                        aStrVn = char( aCatItem.symVn(1:length(aCatItem.symV)) );
-                        if ~strcmp( aStrVn,aStrV )
-                            error('For component ID=%d, %s, the intial symVn variables are different from symV.\n',index,aCatItem.list.name);
-                        end % if ~strcmp
-                    else
-                        error('For component ID=%d, %s, there are more symV variables than symVn.\n',index,aCatItem.list.name);
+                    elseif isempty( aCatItem.symV )
+                        theCat.list(index).symV = aCatItem.symVn;
                     end % if isempty
+                    
+                    % Make sure symV is a subset of symVn.
+                    asymV_NotIn_symVn = setdiff(theCat.list(index).symV,theCat.list(index).symVn);
+                    if ~isempty(asymV_NotIn_symVn)
+                        error('For network ID=%d, %s, the intial symV variables are not a subset of symVn.\n',index,aCatItem.name);
+                    end % if ~isempty
+
                 end % for index
             end % if ~isempty
         end % CRCat.CheckSymVn
@@ -703,6 +705,11 @@
             % If theTerminate==0 (default), returns OK=1 if all OK, 0 otherwise.
             % If Terminate~=0, terminates with error message if bad Id.
             % jcr27apr2025
+
+            if isempty( theId )
+                theOK = 0;
+                return;
+            end % if isempty
             
             % Make sure we have a numeric Id.
             if ~isnumeric( theId )
@@ -1206,6 +1213,12 @@
             % string (or CRCat Id index) Sig into FlagA and FlagB. Returns
             % both FlagA and FlagB = 0 if invalid string or CRCat Index.
             % 10Apr2015jcr
+
+            if isempty( theSig )
+                theFlagA = 0;
+                theFlagB = 0;
+                return;
+            end % if ischar
 
             if iscell(theSig) % Signature from FindBestSignatures comes back
                 aSig = theSig{1}; % as a char array wrapped in a cell.
@@ -2072,12 +2085,10 @@
                             aSameComp = CRComp( iSameId,theCat ); 
                             % See if we can synthesize (using symEL equations)
                             % iSameId based on the iBaseId data and
-                            % see if we get the exact same results.
+                            % see if we get the exact same results..
                             if ~isempty(aSameComp.symEL)
                                 aRmsError = aSameComp.Fit( aBaseY,aFreq );
-                                if isempty(aRmsError) % If there are synthesis
-                                    % equations but still no fit, likely there are fixed
-                                    % elements, so try to solve transform anyway.
+                                if isempty(aRmsError)
                                     aRmsError = -0.1; % Signal that there was no fit even though we have synthesis equations.
                                     % Need to set some dummy element values so
                                     % test for trivial relationship fails.
@@ -2828,8 +2839,26 @@
             iSto = 1; % Next row in aSymSto and aValSto to use.
             
             % If there are more coeff than RLCs (symV) to solve for, must ignore some of the coeff.
-            aComboList = nchoosek( 1:aNumCoef,numel(aCatItem.symV) ); % Try all possible combos of aVmC.
+            aComboListInitial = nchoosek( 1:aNumCoef,numel(aCatItem.symV) ); % Try all possible combos of aVmC.
+            nRow = numel( aComboListInitial(:,1) );
+
+            % Remove all combos that do not span the symV space, because if
+            % the combo does not span symV, cannot solve for symV.
+            for iCombo = 1:nRow
+                aVmC = theVmC( aComboListInitial(iCombo,:) );
+                % See if there are any symV variables totally missing from
+                % aVmC -or- if there are any aVmC members with no symV variables...
+                if ~isempty( setdiff(aCatItem.symV,symvar(aVmC) ) ) || ...
+                   sum( has(aVmC,aCatItem.symV)-1 ) ~= 0
+                      aComboListInitial(iCombo,1) = 0; % Signal to remove this combo from the list.
+                end % if ~isempty
+            end % for iCombo
+
+            % Remove zero-valued combos.
+            aLogicalRows = aComboListInitial(:,1) ~= 0; % Signal to remove combo.
+            aComboList = aComboListInitial( aLogicalRows,: );
             nRow = numel( aComboList(:,1) );
+
             for iCombo = 1:ceil( nRow/7 ):nRow % if more than 7 combos, skip some so that we get about 7 cases done.
                 if iSto <= aMaxNumSto
     
@@ -2885,7 +2914,8 @@
                         % for to see if they re-create the numerical transfer function.
                         aComp.SetSymEL(aTempSymEL);
                         if aNumRLC < aNumRLCn % There are fixed element values to be set in order to do a fit.
-                            aFixedEL = aComp.valEL( :,aNumRLC+1:aNumRLCn );
+                            aLogicalFixedIndices = ~has(aComp.symVn,aComp.symV);
+                            aFixedEL = aComp.valEL( :,aLogicalFixedIndices );
                         else
                             aFixedEL = [];
                         end % if aNumRLC
