@@ -21,9 +21,10 @@ classdef SnP < handle
     end % properties
     
     methods
-        function theData = SnP( ~ )
-            % Data = SnP( ~ ): Construct an empty structure to hold microwave
-            % n-port data. 12nov2021jcr
+        function theData = SnP( theFileName )
+            % Data = SnP( FileName ): Construct a structure to hold microwave
+            % n-port data from FileName. If FileName is not passed, return
+            % an empty SnP structure. 08Oct2025jcr
             
             theData.fUnit  = '';
             theData.fMult  = 0.0;
@@ -35,7 +36,30 @@ classdef SnP < handle
             theData.nPort  = 0;
             theData.mat    = [];
             
+            if nargin >= 1
+                theData.Get( theFileName );
+            end % if isempty
+            
         end % SnP constructor
+
+        
+        function theCopiedData = Copy( theData )
+            % theCopiedData = ( Data,Indices ) Copy SnP Data into CopiedData.
+            % jcr10Oct2025
+
+            theCopiedData = SnP; % Creates an empty SnP.
+            
+            theCopiedData.fUnit  = theData.fUnit;
+            theCopiedData.fMult  = theData.fMult;
+            theCopiedData.pType  = theData.pType;
+            theCopiedData.dType  = theData.dType;
+            theCopiedData.rNorm  = theData.rNorm;
+            theCopiedData.xNorm  = theData.xNorm; % X normalization impedance not yet supported.
+            theCopiedData.freq   = theData.freq;
+            theCopiedData.nPort  = theData.nPort;
+            theCopiedData.mat    = theData.mat;
+            
+        end % SnP.Copy
         
             
         function Init( theData,theLoadStr )
@@ -123,6 +147,10 @@ classdef SnP < handle
 
             % Make sure theFileName is a character, not a string variable.
             aFileName = char(theFileName);
+
+            if exist(aFileName, 'file') ~= 2
+                error('Unable to open data file: %s.\n', aFileName);
+            end % if exist
             
             % Get the number of ports from the file name extension.
             % Find the postion of the last period in the file name.
@@ -222,39 +250,38 @@ classdef SnP < handle
         end % SnP.Get
 
 
-         function Fill( theData,theYRIdata,theFreq )
-            % Data = Fill( Data,YRIdata,Freq ): Fills an SnP using
+         function Fill( theData,theRIdata,theFreq )
+            % Data = Fill( Data,RIdata,Freq ): Fills an SnP using
             % parameter data in Param specified at frequencies in Freq. The
-            % YRIdata is always complex admittance in real and imaginary.
-            % The frequency units are specified using Data.Init with Y and
-            % RI in the LoadStr, which is done after using Data = SnP. YRIdata 
+            % RIdata is always complex, that is, real and imaginary. The
+            % frequency units are specified using Data.Init with Y (or S or Z) and
+            % RI in the LoadStr, which is done after using Data = SnP. RIdata 
             % must be Nports x Nports x NFreq and complex. This routine can
-            % be used directly to change the data in an SnP structure
-            % provided the SnP is set for RI data and Y-parameters.
-            % Example:
+            % be used directly to change the data in an SnP structure.
+            % Example for Y parameters:
             %   aSeed = SnP;
             %   aSeed.Init( '# GHZ Y RI R 1.0' );
             %   aYRIdata(1,1,:) = aCorrectY;
             %   aSeed.Fill( aYRIdata,aFreq );
             % 10jun2023jcr
+            % Modified to allow any of S/Y/Z parameter data to fill Data.
+            % jcr10Oct2025
 
             % Get the number of ports and number of frequencies from the
             % size of the passed data. Check for consistency.
-            [nPorts,aNumCol,aNumFreq] = size( theYRIdata );
+            [nPorts,aNumCol,aNumFreq] = size( theRIdata );
             if nPorts ~= aNumCol
                 error('Data for SnP data must be nPort x nPort x nFreq. First two dimensions are %d x %d.',nPorts,aNumCol);
             elseif aNumFreq ~= size(theFreq)
                 error('Data for SnP data must be nPort x nPort x nFreq. nFreq is %d, but %d frequencies were passed.',aNumFreq,size(theFreq));
             elseif ~strcmp(theData.dType,'RI')
                 error('The SnP structure must be set to RI data. It is set to %s.',theData.dType);
-            elseif ~strcmp(theData.pType,'Y')
-                error('The SnP structure must be set to Y-parameters. It is set to %s-parameters.',theData.pType);
             end % if aNumPorts
             
             % Allocate required memory in theData.
             theData.nPort = nPorts;
             theData.freq  = theFreq;
-            theData.mat = theYRIdata;
+            theData.mat = theRIdata;
 
         end % SnP.Fill
         
@@ -510,25 +537,26 @@ classdef SnP < handle
         end % SnP.AddNoise
         
         
-        function Shorten( theData,theNumFreq )
-            % Shorten( Data,NumFreq ) Reduce the number of frequencies in
-            % Data so that there are no more than NumFreq frequencies left.
-            % If already <= NumFreq, do nothing. Default NumFreq is 10% of
-            % the total. 02Jan2022
-            
-            aNumFreq = ceil( 0.1 * length(theData.freq) ); % Default
-            if nargin > 1
-                aNumFreq = theNumFreq;
-            end % if nargin
-            
-            if aNumFreq < 0
-                aNumFreq = 0;
-            elseif aNumFreq > length(theData.freq)
-                aNumFreq = length(theData.freq);
-            end % if aNumFreq
-            
-            theData.freq( aNumFreq+1:end ) = [];
-            theData.mat( :,:,aNumFreq+1:end ) = [];
+        function theShortenedData = Shorten( theData,theIndices )
+            % ShortenedData = Shorten( Data,Indices ) Remove all data in Data that
+            % is not listed in Indices and return in SnP ShortenedData. Indices
+            % may be an integer array, or a logical array. If Indices is
+            % longer than the number of frequencies, it is truncated.
+            % jcr09Oct2025
+
+            aNumFreq = numel( theData.freq );
+            if numel( theIndices ) > aNumFreq
+                aIndices = theIndices(1:aNumFreq);
+            else
+                aIndices = theIndices;
+            end % if numel
+
+            % Make sure no indices are outside the range of the data.
+            aIndices = aIndices( aIndices<=aNumFreq | aIndices<0 );
+
+            theShortenedData = theData.Copy;
+            theShortenedData.freq = theData.freq(aIndices);
+            theShortenedData.mat = theData.mat(:,:,aIndices);
             
         end % SnP.Shorten
         
@@ -608,7 +636,7 @@ classdef SnP < handle
                 error('Both Type port numbers cannot be zero: %s',aType);
             end % aFitRow
         
-            aDat = theData; % Work on a copy of what was passed.
+            aDat = theData.Copy; % Work on a copy of what was passed.
         
             [nRow,nCol,nFreq] = size(aDat.mat); % Get the number of frequencies.
         
