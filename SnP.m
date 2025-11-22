@@ -25,6 +25,8 @@ classdef SnP < handle
             % Data = SnP( FileName ): Construct a structure to hold microwave
             % n-port data from FileName. If FileName is not passed, return
             % an empty SnP structure. 08Oct2025jcr
+            % If a null string '', or "" is passed, bring up a GUI to get
+            % the file name. 22Nov2025jcr
             
             theData.fUnit  = '';
             theData.fMult  = 0.0;
@@ -144,9 +146,14 @@ classdef SnP < handle
             % to let the user browse for a FileName. Data is always stored in
             % the structure (Data.mat) in real/imaginary ('RI') format, no
             % matter what format it is in the file. 12Nov2021jcr
+            % If no FileName passed, or if FileName == '' or "", bring up a
+            % GUI to select the file name. 22Nov2025
 
-            % Make sure theFileName is a character, not a string variable.
-            aFileName = char(theFileName);
+            if nargin < 2 || theFileName == ""
+                aFileName = GetFileName;
+            else
+                aFileName = char(theFileName);
+            end % if nargin
 
             if exist(aFileName, 'file') ~= 2
                 error('Unable to open data file: %s.\n', aFileName);

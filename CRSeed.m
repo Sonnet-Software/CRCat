@@ -7,7 +7,8 @@ function theComp = CRSeed( theSeed,theCat,theFit,theId,theSprout )
     % Seed is an SnP class variable containing the S-, Y-, or Z-parameter data
     %   to be fitted. If Seed is a string, it is treated as the name of a
     %   file that contains Touchstone formated data. That file is read and
-    %   loaded into an SnP class variable.
+    %   loaded into an SnP class variable. If Seed is a null string, "" or
+    %   '', then a GUI is called allowing the user to select a file.
     % Cat is the catalog of components to be searched.
     % Examples of Fit follow. For more detail see Pull method in SnP class.
     %    Data is pulled from Seed as specified by Fit. That is the data
